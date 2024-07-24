@@ -8,23 +8,27 @@ const Group = lazy(() => import("./pages/Group"));
 import "./styles/Login.css";
 import "./App.css";
 import "./index.css";
+import NotFound from "./pages/NotFound";
 
-let user = false;
+let user = true;
 const App = () => {
   return (
     <BrowserRouter>
       <Routes>
+        <Route element={<ProtectRoutes user={user} />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/chat/:chatId" element={<Chat />} />
+          <Route path="/groups" element={<Group />} />
+        </Route>
         <Route
-          path="/"
+          path="/login"
           element={
-            <ProtectRoutes user={user}>
-              <Home />
+            <ProtectRoutes user={!user} redirect="/">
+              <Login />
             </ProtectRoutes>
           }
         />
-        <Route path="/chat/:chatId" element={<Chat />} />
-        <Route path="/groups" element={<Group />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   );

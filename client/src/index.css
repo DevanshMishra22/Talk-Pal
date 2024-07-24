@@ -1,3 +1,46 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.message-box {
+  font-family: "Roboto", sans-serif;
+}
+.link-button {
+  @apply bg-green-500 text-white font-bold py-2 px-6 rounded transition-all duration-300 mr-2;
+}
+.link-button:hover {
+  @apply bg-gray-700;
+}
+
+@keyframes float {
+  100% {
+    transform: translateY(20px);
+  }
+}
+
+.polygon {
+  animation: float 1s infinite ease-in-out alternate;
+}
+
+#Polygon-2 {
+  animation-delay: 0.2s;
+}
+
+#Polygon-3 {
+  animation-delay: 0.4s;
+}
+
+#Polygon-4 {
+  animation-delay: 0.6s;
+}
+
+#Polygon-5 {
+  animation-delay: 0.8s;
+}
+
+@media (max-width: 450px) {
+  .message-box {
+    @apply text-center;
+  }
+}
