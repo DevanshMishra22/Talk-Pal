@@ -78,16 +78,16 @@ export const sampleUsers = [
 export const sampleNotification = [
   {
     sender: {
-      avatar: ["https://www.w3schools.com/howto/img_avatar.png"],
       name: "Ankur",
+      avatar: ["https://www.w3schools.com/howto/img_avatar.png"],
     },
 
     _id: "23",
   },
   {
     sender: {
-      avatar: ["https://www.w3schools.com/howto/img_avatar.png"],
       name: "Caturvedi",
+      avatar: ["https://www.w3schools.com/howto/img_avatar.png"],
     },
 
     _id: "122",
