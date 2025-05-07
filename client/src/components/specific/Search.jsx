@@ -11,6 +11,7 @@ import {
 import { Search as SearchIcon } from "@mui/icons-material";
 import { useInputValidation } from "6pp";
 import { sampleUsers } from "../../constants/sampleData";
+import UserItem from "../shared/UserItem";
 
 const Search = () => {
   const search = useInputValidation("");

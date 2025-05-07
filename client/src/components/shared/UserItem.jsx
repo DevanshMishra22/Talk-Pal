@@ -1,5 +1,5 @@
 import { Add as AddIcon } from "@mui/icons-material";
-import { Avatar, IconButton, ListItem, Stack } from "@mui/material";
+import { Avatar, IconButton, ListItem, Stack, Typography } from "@mui/material";
 import React, { memo } from "react";
 
 const UserItem = ({ user, handler, handleIsLoading }) => {
@@ -22,6 +22,7 @@ const UserItem = ({ user, handler, handleIsLoading }) => {
             display: "-webkit-box",
             WebkitLineClamp: 1,
             WebkitBoxOrient: "vertical",
+            width: "100%",
           }}
         >
           {name}
