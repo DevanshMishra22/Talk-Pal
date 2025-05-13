@@ -7,7 +7,7 @@ import {
   Stack,
   Typography,
 } from "@mui/material";
-import React, { memo } from "react";
+import { memo } from "react";
 import { sampleNotification } from "../../constants/sampleData";
 
 const Notifications = () => {
@@ -42,7 +42,7 @@ const NotificationItems = memo(({ sender, _id, handler }) => {
         spacing={"1rem"}
         width={"100%"}
       >
-        <Avatar />
+        <Avatar src={avatar} />
         <Typography
           variant="body1"
           sx={{
