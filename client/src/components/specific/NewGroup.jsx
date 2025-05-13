@@ -1,37 +1,77 @@
+import { useInputValidation } from "6pp";
 import {
-  Avatar,
   Button,
   Dialog,
   DialogTitle,
-  ListItem,
   Stack,
   TextField,
   Typography,
 } from "@mui/material";
-import { memo } from "react";
-import UserItem from "../shared/UserItem";
+import { useState } from "react";
 import { sampleUsers } from "../../constants/sampleData";
-import { green } from "@mui/material/colors";
-import { useInputValidation } from "6pp";
+import UserItem from "../shared/UserItem";
 
 const NewGroup = () => {
-  const Selectmemberhandler = () => {};
   const groupName = useInputValidation("");
+  const [members, setMembers] = useState(sampleUsers);
+  const [Selectedmembers, setSelectedMembers] = useState([]);
+  const Selectmemberhandler = (id) => {
+    setSelectedMembers((prev) =>
+      prev.includes(id)
+        ? prev.filter((currentelement) => currentelement !== id)
+        : [...prev, id]
+    );
+  };
+  const submitHandler = () => {};
+  const closeHandler = () => {};
+
   return (
-    <Dialog open>
-      <Stack p={{ xs: "1rem", sm: "2rem" }} width={"25rem"} spacing={"2rem"}>
-        <DialogTitle textAlign={"center"}>New Group</DialogTitle>
+    <Dialog open onClose={closeHandler}>
+      <Stack
+        p={{ xs: "1rem", sm: "2rem" }}
+        width={"25rem"}
+        spacing={"2rem"}
+        sx={{ backgroundColor: "#262626", color: "white" }}
+      >
+        <DialogTitle textAlign={"center"} variant="h4">
+          New Group
+        </DialogTitle>
         <TextField
           label="Group name"
           value={groupName.value}
           onChange={groupName.changeHandler}
+          InputLabelProps={{
+            style: { color: "white" },
+          }}
+          InputProps={{
+            style: { color: "white" },
+          }}
+          sx={{
+            "& .MuiOutlinedInput-root": {
+              "& fieldset": {
+                borderColor: "white",
+              },
+              "&:hover fieldset": {
+                borderColor: "white",
+              },
+              "&.Mui-focused fieldset": {
+                borderColor: "white",
+              },
+            },
+          }}
         />
+
         <Typography textAlign={"center"} variant="body1">
           Select Members
         </Typography>
         <Stack>
-          {sampleUsers.map((i) => (
-            <UserItem user={i} key={i._id} handler={Selectmemberhandler} />
+          {members.map((i) => (
+            <UserItem
+              user={i}
+              key={i._id}
+              handler={Selectmemberhandler}
+              isAdded={Selectedmembers.includes(i._id)}
+            />
           ))}
         </Stack>
         <Stack
@@ -50,6 +90,7 @@ const NewGroup = () => {
                 borderColor: "darkgreen",
               },
             }}
+            onClick={submitHandler}
           >
             Create
           </Button>

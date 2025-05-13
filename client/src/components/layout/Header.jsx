@@ -42,7 +42,7 @@ const Header = () => {
     setIsNotification((prev) => !prev);
   };
 
-  const navigateToGroup = () => navigate("groups");
+  const navigateToGroup = () => navigate("/groups");
   const logoutHandler = () => {
     console.log("Logout");
   };
