@@ -28,5 +28,5 @@ export const InputBox = styled("input")`
   outline: none;
   padding: 0rem 3rem;
   border-radius: 1.5rem;
-  background-color: #939191;
+  background-color: rgb(234, 225, 233);
 `;

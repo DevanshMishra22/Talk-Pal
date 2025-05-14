@@ -8,7 +8,12 @@ import {
 } from "@mui/icons-material";
 import { InputBox } from "../components/styles/StyledComponent";
 import FileMenu from "../components/dailogs/FileMenu";
-
+import { sampleMessage } from "../constants/sampleData";
+import MessageComponent from "../components/shared/MessageComponent";
+const user = {
+  _id: "idhqifhqkf",
+  name: "Devansh Mishra",
+};
 const Chat = () => {
   const containerRef = useRef(null);
   return (
@@ -25,7 +30,9 @@ const Chat = () => {
           overflowY: "auto",
         }}
       >
-        {/* {Messages will render here} */}
+        {sampleMessage.map((i) => (
+          <MessageComponent message={i} user={user} />
+        ))}
       </Stack>
       <form style={{ height: "10%" }}>
         <Stack
@@ -45,7 +52,7 @@ const Chat = () => {
           >
             <AttachFileIcon
               sx={{
-                color: "#ffffff",
+                color: "#000",
               }}
             />
           </IconButton>
