@@ -7,6 +7,7 @@ import {
   Send as SendIcon,
 } from "@mui/icons-material";
 import { InputBox } from "../components/styles/StyledComponent";
+import FileMenu from "../components/dailogs/FileMenu";
 
 const Chat = () => {
   const containerRef = useRef(null);
@@ -76,6 +77,7 @@ const Chat = () => {
           </IconButton>
         </Stack>
       </form>
+      <FileMenu></FileMenu>
     </Fragment>
   );
 };

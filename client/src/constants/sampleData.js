@@ -100,3 +100,21 @@ export const sampleNotification = [
     _id: "122",
   },
 ];
+export const sampleMessage = [
+  {
+    attactments: [
+      {
+        public_id: "hello",
+        url: "https://www.w3schools.com/howto/img_avatar.png",
+      },
+    ],
+    content: "hello world",
+    _id: "khdhw",
+    sender: {
+      _id: "user._id",
+      name: "Elby",
+    },
+    chat: "chatId",
+    createdAt: "2024-02-12T10:41:30.630Z",
+  },
+];
