@@ -108,13 +108,29 @@ export const sampleMessage = [
         url: "https://www.w3schools.com/howto/img_avatar.png",
       },
     ],
-    content: "hello world",
+    content: "hi skipper whats your plans",
     _id: "khdhw",
     sender: {
       _id: "user._id",
       name: "Elby",
     },
     chat: "chatId",
-    createdAt: "2024-02-12T10:41:30.630Z",
+    createdAt: "2025-05-15T10:31:30.630Z",
+  },
+  {
+    attactments: [
+      {
+        public_id: "hello2",
+        url: "https://www.w3schools.com/howto/img_avatar.png",
+      },
+    ],
+    content: "hola espanial? yeah my plans are...",
+    _id: "khdxcbbyfhw",
+    sender: {
+      _id: "qwerty",
+      name: "thomas",
+    },
+    chat: "chatId",
+    createdAt: "2025-05-15T10:41:30.630Z",
   },
 ];

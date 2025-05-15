@@ -11,7 +11,7 @@ import FileMenu from "../components/dailogs/FileMenu";
 import { sampleMessage } from "../constants/sampleData";
 import MessageComponent from "../components/shared/MessageComponent";
 const user = {
-  _id: "idhqifhqkf",
+  _id: "qwerty",
   name: "Devansh Mishra",
 };
 const Chat = () => {
