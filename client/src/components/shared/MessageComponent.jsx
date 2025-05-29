@@ -1,8 +1,8 @@
 import { Typography } from "@mui/material";
-import React, { memo } from "react";
 import { lightblue, orange } from "../../constants/color";
 import moment from "moment";
 import fileformat from "../../lib/features";
+import { memo } from "react";
 
 const MessageComponent = ({ message, user }) => {
   const { sender, content, attactments = [], createdAt } = message;
@@ -34,7 +34,7 @@ const MessageComponent = ({ message, user }) => {
       {attactments.lenght > 0 &&
         attactments.map((attachment, index) => {
           const url = attachment.url;
-          const file = fileformat;
+          const file = fileformat(url);
           return (
             <Box>
               <a

@@ -1,4 +1,4 @@
-const fileFormat = (url = "fffe.in.com.hellowfj.png") => {
+const fileFormat = (url = "") => {
   const fileExt = url.split(".").pop();
   if (fileExt === "mp4" || fileExt === "webm" || fileExt === "ogg")
     return "video";
@@ -14,4 +14,4 @@ const fileFormat = (url = "fffe.in.com.hellowfj.png") => {
 
   return "file";
 };
-export { fileFormat };
+export default { fileFormat };
